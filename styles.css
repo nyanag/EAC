@@ -5,22 +5,8 @@
 body{
     background-color: #121212;
 }
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main {
-  flex: 1 0 auto;
-}
 .nav-wrapper{
     background-color: green;
-}
-.logo{
-  margin-top: 8px;
-  width: 8vw;
-  height: 7vh;
 }
 .underline{
    border: 1px solid green;
@@ -29,7 +15,8 @@ main {
 }
 .register{
     top: 50px;
-    left: 20%;
+    left: 100px;
+    right: 100px;
 }
 .success{
     top: 50px;
@@ -48,7 +35,7 @@ main {
     background-color: green !important;
     box-shadow: none;
 }
-
+}
 .tabs{
     margin-bottom: 20px;
 }
@@ -58,12 +45,12 @@ main {
 }
 
 .tabs .tab a:hover {
-    background-color:rgb(214, 241, 212);
+    background-color:rgb(147, 236, 144);
     color:#121212;
 } 
 
 .tabs .tab a.active {
-    background-color:rgb(214, 241, 212);
+    background-color:rgb(142, 224, 135);
     color:#000;
 } 
 
@@ -137,18 +124,6 @@ main {
     line-height: 40px;
   }
   @media (max-width: 600px) {
-    .register{
-      left: 0%;
-      top: 0;
-    }
-    .success{
-      left: 0%;
-      top: 50px;
-    }
-    .logo{
-      height: 6vh;
-      width: 10vw;
-    }
     .timeline .timeline-event .timeline-content {
       width: calc(100% - 70px);
     }

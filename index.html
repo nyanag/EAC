@@ -15,76 +15,71 @@
 <body>
     <nav>
         <div class="nav-wrapper z-depth-1">
-            <a href="https://www.ecellvit.in/" class="brand-logo center"><img src="Ecell Black.png" class="logo"></a>
-            <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#!">Home</a></li>
             <li><a href="#!">About</a></li>
             <li><a href="#!">Events</a></li>
-            </ul> -->
+            </ul>
         </div>
     </nav>
     <div class="row">
-        <div class="col s12 m4">
+        <div class="col s8 m4">
           <div class="card register">
+           
             <div class="card-content">
                 <ul class="tabs tabs-fixed-width">
-                    <li class="card-title tab"><a href="#external">External</a></li>
-                    <li class="card-title tab"><a href="#internal">Internal</a></li>
+                    <li class="card-title tab" onclick="clearf('ext');"><a href="#external">External</a></li>
+                    <li class="card-title tab" onclick="clearf('int');"><a href="#internal">Internal</a></li>
                 </ul>
               <!-- <div class="underline"></div> -->
+            <form method="post" action="register.php">
               <div class="row" id="external">
-                <div class="input-field col s12">
-                <input id="first_name" type="text" class="validate">
+                <div class=" col s12">
+                <input id="first_name" name="first_name" type="text" class="validate">
                 <label for="first_name">First Name</label>
                 </div>  
-                <div class="input-field col s12">
-                <input id="phone" type="text" class="validate">
+                <div class="col s12">
+                <input name="phone" type="text" class="validate">
                 <label for="phone">Phone No</label>
                 </div>
-                <div class="input-field col s12">
-                <input id="college" type="text" class="validate">
+                <div class="col s12">
+                <input name="college" type="text" class="validate">
                 <label for="college">College</label>
                 </div>
-                <div class="input-field col s12">
-                <input id="email" type="text" class="validate">
+                <div class="col s12">
+                <input name="email" type="text" class="validate">
                 <label for="email">Email</label>
                 </div>
               </div>   
               <div class="row" id="internal">
-                <div class="input-field col s12">
-                <input id="firstName" type="text" class="validate">
+                <div class="col s12">
+                <input id="firstName" name="firstName" type="text" class="validate">
                 <label for="firstName">First Name</label>
                 </div>  
-                <div class="input-field col s12">
-                <input id="phone_" type="text" class="validate">
+                <div class="col s12">
+                <input name="phone_" type="text" class="validate">
                 <label for="phone_">Phone No</label>
                 </div>
-                <div class="input-field col s12">
-                <input id="regNo" type="text" class="validate">
+                <div class="col s12">
+                <input name="regNo" type="text" class="validate">
                 <label for="regNo">Registration No.</label>
                 </div>
-                <div class="input-field col s12">
-                <input id="vitemail" type="text" class="validate">
+                <div class="col s12">
+                <input name="email" type="text" class="validate">
                 <label for="vitemail">VIT Email</label>
                 </div>
-                </div>    
+            </div> 
+            <input type="submit" name="submit" class="waves-effect waves-teal btn">
+              </form>   
             </div>
             <div class="card-action">
-              <a class="waves-effect waves-teal btn" href="register.html">Register</a>
+              <input type="submit" name="submit" class="waves-effect waves-teal btn">
             </div>
+          
           </div>
         </div>
-        <div class="col s12 m6">
-            <div class="card register">
-                <div class="card-content">
-                    <div class="card-title">
-                        About E-cell
-                    </div>
-                    <div class="underline"></div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa soluta molestias aut iste quasi illo dicta. Labore corporis voluptas, eius, incidunt illo suscipit nulla explicabo dolor voluptate saepe impedit ab.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem soluta ducimus repellat similique. Possimus natus quaerat qui eius perspiciatis modi, autem pariatur illum dignissimos, aspernatur suscipit error eaque eveniet nemo.
-                </div>
-            </div>
+        <div class="col s8 m6">
             <div class="card register">
                 <div class="card-content">
                     <div class="card-title">
@@ -104,6 +99,16 @@
  var tabs = document.querySelectorAll('.tabs')
 for (var i = 0; i < tabs.length; i++){
 	M.Tabs.init(tabs[i]);
+}
+function clearf(x)
+{
+    if(x=='ext')
+    {
+        document.getElementById('firstName').value='';
+    }
+    else if (x=='int') {
+        document.getElementById('first_name').value='';
+    }
 }
 </script>
 </html>
