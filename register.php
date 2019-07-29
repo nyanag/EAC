@@ -53,27 +53,28 @@ echo $rowsres;
 
 if(isset($_POST['submit'])){
 	$Regid='19eac'.($rowsres+1);
-	$Name=$_POST['first_name'];
 	$Phone=$_POST['phone'];
-	$Email=$_POST['email'];	
+	$email=$_POST['email'];	
 	if(strlen($_POST['first_name'])>0)
 	{
+		$Name=$_POST['first_name'];
 		$College=$_POST['college'];
 		$queryforexternals="INSERT INTO participants(Reg_id,Type,Name,Phone,Email,College) values('$Regid','External','$Name','$Phone','$email','$College');";
 		if ($conn->query($queryforexternals) === TRUE) {
 			echo "New record created successfully";
 		} else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
+			echo "Error: " . "<br>" . $conn->error;
 		}
 	}
 	else if(strlen($_POST['firstName'])>0)
 	{
+		$Name=$_POST['firstName'];
 		$Regno=$_POST['regNo'];
 		$queryforinternals="INSERT INTO participants(Reg_id,Type,Name,Phone,Email,Reg_no,College) values('$Regid','Internal','$Name','$Phone','$email','$Regno','VIT Vellore');";
 		if ($conn->query($queryforinternals) === TRUE) {
 			echo "New record created successfully";
 		} else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
+			echo "Error: " . "<br>" . $conn->error;
 		}
 
 	}
