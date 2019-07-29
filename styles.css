@@ -16,18 +16,23 @@ body{
 .register{
     top: 50px;
     left: 100px;
-    right: 100px;
+    /* right: 100px; */
+}
+.logo{
+  width: 8vw;
+  height: 6vh;
+  margin-top: 8% !important;
 }
 .success{
     top: 50px;
-    left: 50%;
+    /* left: 50%; */
     margin-bottom: 100px !important;
     
 }
 .card-title{
     font-weight: 500 !important;
 }
-.card-action a{
+input[type='submit']{
     color: white !important;
     font-weight: 600;
 }
@@ -35,7 +40,7 @@ body{
     background-color: green !important;
     box-shadow: none;
 }
-}
+
 .tabs{
     margin-bottom: 20px;
 }
