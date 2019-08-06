@@ -1,20 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db="eac2019";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password,$db);
-
-// Check connection
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-}
+include("connection.php");
 $rowscountquery="SELECT * from participants;";
 $noofrows=mysqli_query($conn,$rowscountquery);
 $rowsres=mysqli_num_rows($noofrows);
-echo $rowsres;
+// echo $rowsres;
 if(isset($_POST['submit'])){
 	if(strlen($_POST['first_name'])>0)
 	{
@@ -25,10 +14,10 @@ if(isset($_POST['submit'])){
 		$email=$_POST['Email'];
 		$queryforexternals="INSERT INTO participants(Reg_id,Type,Name,Phone,Email,College) values('$Regid','External','$Name','$Phone','$email','$College');";
 		if ($conn->query($queryforexternals) === TRUE) {
-			// echo "New record created successfully";
+			echo "New record created successfully";
 			header("location:register.html");
 		} else {
-			// echo "Error: " .$conn. "<br>" . $conn->error;
+			echo "Error: " .$conn. "<br>" . $conn->error;
 			header("location:index.html");
 		}
 
