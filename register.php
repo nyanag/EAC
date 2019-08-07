@@ -14,10 +14,10 @@ if(isset($_POST['submit'])){
 		$email=$_POST['Email'];
 		$queryforexternals="INSERT INTO participants(Reg_id,Type,Name,Phone,Email,College) values('$Regid','External','$Name','$Phone','$email','$College');";
 		if ($conn->query($queryforexternals) === TRUE) {
-			echo "New record created successfully";
+			// echo "New record created successfully";
 			header("location:register.html");
 		} else {
-			echo "Error: " .$conn. "<br>" . $conn->error;
+			// echo "Error: " .$conn. "<br>" . $conn->error;
 			header("location:index.html");
 		}
 
